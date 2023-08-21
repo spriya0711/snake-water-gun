@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake | Gun | Water</title>
+    <link rel="stylesheet" href="SGW.css"/>
+    <meta name="view port" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="heading">
+        <button type="submit" class="btn" onclick="openPopup()">Game Rule</button>
+        <div class="popup" id="popup">
+            <img src="thumb.png">
+            <br>
+            <h2>Read Instructions</h2>
+            <p><b>Snake vs Water:</b> Snake drinks the water hence wins.</p>
+            <p><b>Water vs Gun:</b> The gun will drown in water, hence water wins.</p>
+            <p><b>Gun vs Snake:</b> Gun will kill the snake and win.</p>
+            <button type="button" onclick="closePopup()">Start the game?</button>
+        </div>
+        <h1>IT'S PLAYTIME</h1>
+        <p>Choose any one from Snake | Gun | Water</p>
+    </div>
+
+    <div class="card">
+
+        <div class="cards" id="snake">
+            <button style="cursor: pointer;" class="cards img" id="snakeBtn">
+                <img src="snake-2.png">
+            </button>
+        </div>
+        <div class="cards" id="gun">
+            <button style="cursor: pointer;" class="cards img" id="gunBtn">
+                <img src="gun.png">
+            </button>
+        </div>
+        <div class="cards" id="water">
+            <button style="cursor: pointer;" class="cards img" id="waterBtn">
+                <img src="water-2.png">
+            </button>
+        </div>
+    </div>
+    
+    <div class="table">
+        <table id="resultTable">
+            <tr>
+                <th>Round</th>
+                <th style="width:250px">Player</th>
+                <th>Computer</th>
+            </tr>
+    </table>
+    </div>
+    <!--Game Rule Syntax Below-->
+<script>
+    let popup=document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>
+<script src="SGW.js"></script>
+</body>
+</html>
